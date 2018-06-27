@@ -12,7 +12,7 @@ module.exports = {
     index() {
         return {
             type: IdType,
-            description: 'Return a Id',
+            description: 'Return an Id',
             args: {
                 auth: {
                     type: FacternAuthDetails,

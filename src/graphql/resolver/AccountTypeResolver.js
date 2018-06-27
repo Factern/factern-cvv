@@ -11,7 +11,7 @@ const AccountTypeController = {
             return { accountType: 2 };
         }
 
-        // if there is a named entity called cvverity-cpNode, it's a credential provider
+        // if there is a named entity called cvverify-cpNode, it's a credential provider
         // otherwise it's a subject
         return factern.withToken('describe', {
             nodeId: constants.CRED_PROV_NODE

@@ -26,7 +26,7 @@ const Output = new GraphQLObjectType({
         },
         rootNodeId: {
             type: GraphQLString,
-            description: 'The node ID of root node (cvverity-cpNode or cvverity-subProfile)'
+            description: 'The node ID of root node (cvverify-cpNode or cvverify-subProfile)'
         }
     })
 });

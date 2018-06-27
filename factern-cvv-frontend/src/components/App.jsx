@@ -12,7 +12,6 @@ import LoginPage from './containers/LoginPage';
 import AuthRedirect from './containers/AuthRedirect';
 import HomeRedirect from './HomeRedirect';
 import * as actions from '../actions/authActions';
-// import PrivateRoute from './PrivateRoute';
 
 function mapStateToProps() {
   return {};

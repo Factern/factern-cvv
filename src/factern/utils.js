@@ -22,7 +22,7 @@ const getSubjectProfileNodeId = (auth) =>
     factern.withToken('describe', { nodeId: constants.SUB_PROFILE_NODE }, auth)
     .then(result => result.data.node.nodeId)
         .catch(err => {
-            console.log(`Error getting cvverity-subProfile: ${JSON.stringify(err)}`)
+            console.log(`Error getting cvverify-subProfile: ${JSON.stringify(err)}`)
         });
 
 module.exports = {

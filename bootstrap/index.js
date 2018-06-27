@@ -65,7 +65,7 @@ function createEntity(name) {
 }
 
 const entities = [
-    createEntity('cvverity-cpNode'),
+    createEntity('cvverify-cpNode'),
 ];
 
 const fields = [

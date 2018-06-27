@@ -13,7 +13,7 @@ const initialState = {
 
 function linkDetails(state = initialState, action) {
   switch (action.type) {
-    case types.LINK_DETAILS_FETCH_DONE: {
+    case types.FETCH_LINK_DETAILS_DONE: {
       // eslint-disable-next-line no-console
       console.log(`${action}`);
 

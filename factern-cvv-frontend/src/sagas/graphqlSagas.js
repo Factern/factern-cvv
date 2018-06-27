@@ -103,7 +103,7 @@ sagaDefs.push({
 
 
 sagaDefs.push({
-  actionType: types.LINK_DETAILS_FETCH,
+  actionType: types.FETCH_LINK_DETAILS,
   work: function* work(action) {
     const { linkId } = action;
     const ret = yield call(graphqlClient.linkDetails, linkId);
@@ -111,7 +111,7 @@ sagaDefs.push({
     // eslint-disable-next-line no-console
     console.log(`Fetched link details ${JSON.stringify(ret)}`);
 
-    yield put({ type: types.LINK_DETAILS_FETCH_DONE, ...ret });
+    yield put({ type: types.FETCH_LINK_DETAILS_DONE, ...ret });
   },
 });
 
