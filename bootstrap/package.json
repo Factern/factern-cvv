@@ -1,0 +1,15 @@
+{
+  "name": "cvverify-bootstrap",
+  "version": "1.0.0",
+  "description": "A command-line tool for bootstrapping the Credential Provider login for CVVerify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Finovertech",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "factern_api_version_2": "http://download.factern.net/javascript/factern-api-js.tgz"
+  }
+}
