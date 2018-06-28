@@ -1,6 +1,6 @@
 'use strict';
 
-const FacternClient = require('factern_api_version_2/dist/factern-client-bundle');
+const FacternClient = require('@factern/factern-client');
 const auth0 = require('../auth/auth0');
 
 const apiClient = FacternClient.ApiClient.instance;

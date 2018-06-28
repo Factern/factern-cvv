@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@factern/factern-client": "^0.9.4",
     "aws-sdk": "^2.247.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "factern_api_version_2": "http://download.factern.net/javascript/factern-api-js.tgz",
     "graphql": "^0.13.2",
     "graphql-compose": "^4.3.0"
   }

@@ -25,8 +25,6 @@ if (!name) {
     process.exit(1);
 }
 
-console.log(`${jwt} ${login} ${name}`);
-
 const apiClient = FacternClient.ApiClient.instance;
 const factsApi = new FacternClient.FactsApi();
 const oauth2 = apiClient.authentications['OAuth2'];
