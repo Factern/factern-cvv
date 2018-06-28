@@ -1,4 +1,4 @@
-Factern Demo application CVVerify using GraphQL and GraphiQL
+Factern Demo application CVVerify using GraphQL and Graph*i*QL
 ==========================================================
 
 ## What is this repository for?
@@ -15,25 +15,32 @@ that are certified by credential providers (like universities, companies, etc.).
 ## To build:
  - npm install
  - npm install http://download.factern.net/javascript/factern-api-js.tgz
- - npm run-script build
+
+## To bootstrap:
+
+Use the clientId, clientSecret and login to generate a JWT using the instructions in the [documentation](http://docs.factern.net/users-guide/). 
+Use this JWT to bootstrap the credential provider account. The bootstrap script (`bootstrap/index.js`) 
+produces a `constants.json` file that you should copy to the `src/factern` directory.
 
 ## To run:
 
-Use the clientId, clientSecret and login to generate a JWT using the instructions in the [documentation](http://docs.factern.net/users-guide/). 
-Use this JWT to bootstrap the credential provider account. This bootstrap scripts produces a `constants.json` 
-file that you can copy to `src/factern` directory.
+Set the clientId, clientSecret and login as environment variables CLIENT_ID, CLIENT_SECRET and LOGIN_ID 
+that will be used by the GraphQL application. These values should belong to the same
+account that was used to bootstrap the credential provider account.
 
-Also set the clientId, clientSecret and login as environment variables CLIENT_ID, CLIENT_SECRET and LOGIN_ID 
-that will be used by the GraphQL application.
+    export CLIENT_ID='zYAKggrtvpGcP9nyIqa355c71gCTJReB'
+    export CLIENT_SECRET='<client_secret>'
+    export LOGIN_ID='00000000A22F0ECC0C4D9712D2F208B6CD7BD2E00D7783D5'
 
 ### Start
 
- - npm start -s
+ - Start the GraphQL application using `npm start -s`
 
 ## To use:
- Open http://localhost:3000/graphiql
+ Open http://localhost:1337/graphiql
  
  - Create a subject profile
+ 
  ```angular2html
 mutation spc($input: SubjectProfileInput!, $auth: FacternAuthDetails!) {
   subjectProfileCreate(input: $input, auth: $auth) {
@@ -41,6 +48,7 @@ mutation spc($input: SubjectProfileInput!, $auth: FacternAuthDetails!) {
   } 
 }
 ```
+
  The variables `$input` and `$auth` should be specified in the Query Variables section in the bottom of the
  GraphiQL console.
  
@@ -62,6 +70,7 @@ mutation spc($input: SubjectProfileInput!, $auth: FacternAuthDetails!) {
 Execute the mutation request, and the result will be a 192 bit Factern ID that identifies the subject (job seeker). 
 
 - The subject that was just created against login ID `00000000DA85C2A323CF162568AFD162552B9F8AD14DAAA9` can be queried using
+
 ```angular2html
 query spg($auth: FacternAuthDetails!){
   subjectProfileGet(auth: $auth) {
@@ -74,4 +83,4 @@ query spg($auth: FacternAuthDetails!){
 }
 ```
 
-For a full list of queries and mutations that are supported, opens the Docs side bar on GraphiQL.
+For a full list of queries and mutations that are supported, opens the Docs side bar on Graph*i*QL.
