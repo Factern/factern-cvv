@@ -14,7 +14,6 @@ that are certified by credential providers (like universities, companies, etc.).
 
 ## To build:
  - npm install
- - npm install http://download.factern.net/javascript/factern-api-js.tgz
 
 ## To bootstrap:
 
